@@ -24,5 +24,4 @@ final.data <- final.insurance %>%
          expand = (year>=expand_year & !is.na(expand_year))) %>%
   rename(expand_ever=expanded)
 
-write_tsv(final.data,'data/ACS_Medicaid.txt',append=FALSE,col_names=TRUE)
-write_rds(final.data,'data/acs_medicaid.rds')
+write_rds(final.data,'acs_medicaid.rds')
